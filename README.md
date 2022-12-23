@@ -1,6 +1,6 @@
 
-| :memo: | **This is a personal project for reference, not a ready-made software!** |
-|--------|--------------------------------------------------------------------------|
+| :exclamation: | **This is a personal project for reference, not a ready-made software!** |
+|---------------|--------------------------------------------------------------------------|
 
 # QuickTalkTTS
 
