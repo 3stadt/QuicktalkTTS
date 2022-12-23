@@ -106,6 +106,7 @@ func main() {
 		buttons.Add(widget.NewButton(entry.label, func() {
 			createAndPlay(text, true)
 		}))
+		permHistory[createMd5Hash(text)] = struct{}{}
 	}
 
 	//content := container.NewVBox(howto, input, buttons, list)
@@ -133,7 +134,7 @@ func (m *ttsTextField) TypedKey(key *fyne.KeyEvent) {
 }
 
 func createAndPlay(text string, keepForever bool) {
-	hash := getHash(text)
+	hash := createMd5Hash(text)
 	preRecFileName := fmt.Sprintf("%s/%s.mp3", histFileFolder, hash)
 
 	if !fileExists(preRecFileName) {
@@ -246,7 +247,7 @@ func fileExists(filePath string) bool {
 	return !info.IsDir()
 }
 
-func getHash(text string) string {
+func createMd5Hash(text string) string {
 	hash := md5.Sum([]byte(text))
 	return hex.EncodeToString(hash[:])
 }
