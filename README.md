@@ -1,3 +1,7 @@
+
+| :memo: | **This is a personal project for reference, not a ready-made software!** |
+|--------|--------------------------------------------------------------------------|
+
 # QuickTalkTTS
 
 QuickTalkTTS is a text to speech program with a very narrow use case, using AWS Polly.
